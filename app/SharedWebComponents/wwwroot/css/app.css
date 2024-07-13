@@ -27,10 +27,10 @@ blockquote:not(:empty) p::before {
     padding-right: 0.5rem;
 }
 
-/* .mud-chip-text.mud-chip-color-info {
+.mud-chip-text.mud-chip-color-info {
     background-color: lightgray;
-    color: gray;
-} */
+    color: var(--mud-palette-tertiary);
+}
 
 ul,
 ol {
