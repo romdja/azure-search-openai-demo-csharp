@@ -1,10 +1,19 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 
+using MudBlazor.Utilities;
+
 namespace SharedWebComponents.Shared;
 
 public sealed partial class MainLayout
 {
-    private readonly MudTheme _theme = new();
+    private readonly MudTheme _theme = new MudTheme { Palette = 
+    { 
+        Primary = Colors.Green.Default, 
+        Secondary = new MudColor("#8CC441"),
+        //Tertiary = Colors.LightBlue.Default ,
+
+        AppbarBackground = new MudColor("#8CC441"),
+        } };
     private bool _drawerOpen = true;
     private bool _settingsOpen = false;
     private SettingsPanel? _settingsPanel;

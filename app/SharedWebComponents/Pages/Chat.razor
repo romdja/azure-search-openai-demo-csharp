@@ -18,9 +18,7 @@
                 @foreach (var ((question, askedOn), answer) in _questionAndAnswerMap)
                 {
                     <MudStack Justify="Justify.Center" AlignItems="AlignItems.Start" Spacing="4">
-                        <MudBadge Origin="Origin.TopLeft" Overlap="true" Color="Color.Secondary"
-                          Icon="@Icons.Material.Filled.QuestionMark" Class="d-flex align-self-end">
-                            <MudPaper Class="pa-6 d-flex flex-column" Elevation="3">
+                        <MudPaper Class="pa-6 d-flex flex-column" Elevation="3">
                                 <MudText Typo="Typo.body1" Align="Align.End">
                                     @question
                                 </MudText>
@@ -28,32 +26,44 @@
                                     @($"Asked at {askedOn:h:mm:ss tt} on {askedOn:M/dd/yy}")
                                 </MudText>
                             </MudPaper>
-                        </MudBadge>
+                        @* <MudBadge Origin="Origin.TopLeft" Overlap="true" Color="Color.Secondary"
+                          Icon="@Icons.Material.Filled.QuestionMark" 
+                          Class="d-flex align-self-end">
+                            
+                        </MudBadge> *@
                         <div class="ten-twelves">
                             @if (answer is null)
                             {
-                                <MudBadge Origin="Origin.TopLeft" Overlap="true" Color="Color.Secondary"
-                                          Icon="@Icons.Material.Filled.Lightbulb" Class="full-width">
-                                    <MudPaper Class="pa-6" Elevation="3">
+                                 <MudPaper Class="pa-6" Elevation="3">
                                         <Loading />
                                     </MudPaper>
-                                </MudBadge>
+
+                                @* <MudBadge Origin="Origin.TopLeft" Overlap="true" Color="Color.Secondary"
+                                           Icon="@Icons.Material.Filled.Lightbulb" 
+                                          Class="full-width" >
+                                   
+                                </MudBadge> *@
                             }
                             else if (answer is { Error.Length: > 0 })
                             {
-                                <MudBadge Origin="Origin.TopLeft" Overlap="true" Color="Color.Error"
-                                          Icon="@Icons.Material.Filled.Error">
-                                    <AnswerError Error="@answer" Question="@question"
+                                <AnswerError Error="@answer" Question="@question"
                                         OnRetryClicked="@OnAskQuestionAsync" />
-                                </MudBadge>
+
+                                @* <MudBadge Origin="Origin.TopLeft" Overlap="true" Color="Color.Error"
+                                          Icon="@Icons.Material.Filled.Error"
+                                          >
+                                    
+                                </MudBadge> *@
                             }
                             else
                             {
+                                    <Answer Retort="@answer.Choices[0]" FollowupQuestionClicked="@OnAskQuestionAsync" />
+
+@* 
                                 <MudBadge Origin="Origin.TopLeft" Overlap="true" Color="Color.Secondary"
                                           Icon="@Icons.Material.Filled.AutoAwesome"
                                           Style="display:inherit">
-                                    <Answer Retort="@answer.Choices[0]" FollowupQuestionClicked="@OnAskQuestionAsync" />
-                                </MudBadge>
+                                </MudBadge> *@
                             }
                         </div>
                     </MudStack>
