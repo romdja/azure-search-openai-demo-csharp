@@ -10,7 +10,7 @@ public sealed partial class MainLayout
     { 
         Primary = Colors.Green.Default, 
         Secondary = new MudColor("#8CC441"),
-        //Tertiary = Colors.LightBlue.Default ,
+        Tertiary = Colors.Green.Darken2,
 
         AppbarBackground = new MudColor("#8CC441"),
         } };

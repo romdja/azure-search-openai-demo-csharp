@@ -18,7 +18,8 @@
                 @foreach (var ((question, askedOn), answer) in _questionAndAnswerMap)
                 {
                     <MudStack Justify="Justify.Center" AlignItems="AlignItems.Start" Spacing="4">
-                        <MudPaper Class="pa-6 d-flex flex-column" Elevation="3">
+                        
+                        <MudPaper Class="pa-6 d-flex flex-column d-flex align-self-end" Elevation="3">
                                 <MudText Typo="Typo.body1" Align="Align.End">
                                     @question
                                 </MudText>

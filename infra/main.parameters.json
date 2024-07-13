@@ -18,7 +18,7 @@
       "value": "${AZURE_FORMRECOGNIZER_SERVICE}"
     },
     "formRecognizerSkuName": {
-      "value": "S0"
+      "value": "F0"
     },
     "keyVaultName": {
       "value": "${AZURE_KEY_VAULT_NAME}"
@@ -60,7 +60,7 @@
       "value": "${AZURE_SEARCH_SERVICE_RESOURCE_GROUP}"
     },
     "searchServiceSkuName": {
-      "value": "free"
+      "value": "basic"
     },
     "storageAccountName": {
       "value": "${AZURE_STORAGE_ACCOUNT}"
