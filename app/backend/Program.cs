@@ -2,6 +2,7 @@
 
 using Microsoft.AspNetCore.Antiforgery;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.ConfigureAzureKeyVault();

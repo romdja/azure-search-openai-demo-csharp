@@ -18,7 +18,7 @@
       "value": "${AZURE_FORMRECOGNIZER_SERVICE}"
     },
     "formRecognizerSkuName": {
-      "value": "F0"
+      "value": "S0"
     },
     "keyVaultName": {
       "value": "${AZURE_KEY_VAULT_NAME}"
