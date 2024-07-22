@@ -261,3 +261,14 @@ button {
         -webkit-box-shadow: 0 0 0 0 rgba(118, 106, 231, 0);
     }
 }
+
+.example-question {
+    background-color: #ffc84a;
+    color: #2d2d2a;
+}
+
+.example-question:hover {
+    background-color: #e2f0cf;
+    color: #0f5532;
+    filter: brightness(100%);
+}

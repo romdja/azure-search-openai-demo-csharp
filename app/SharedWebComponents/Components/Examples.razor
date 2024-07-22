@@ -6,11 +6,11 @@
                 
     </MudItem>
     <MudItem xs="12">
-        <MudText Typo="Typo.h5" Align="Align.Center">@Message</MudText>
+        <MudText Typo="Typo.h4" style="font-weight: 700;" Align="Align.Center">@Message</MudText>
     </MudItem>
     <MudItem lg="3" xs="12">
         <MudPaper Elevation="4" Height="6rem" onclick="@(async () => await OnClickedAsync(WhatIsIncluded))"
-                  Class="d-flex pa-8 clickable flex-column align-center justify-center mud-width-full rounded dim">
+                  Class="d-flex pa-8 clickable flex-column align-center justify-center mud-width-full rounded dim example-question">
             <MudText  Typo="Typo.body1">
                 @WhatIsIncluded
             </MudText>
@@ -18,7 +18,7 @@
     </MudItem>
     <MudItem lg="3" xs="12">
         <MudPaper Elevation="4" Height="6rem" onclick="@(async () => await OnClickedAsync(WhatIsPerfReview))"
-                  Class="d-flex pa-8 clickable flex-column align-center justify-center mud-width-full rounded dim">
+                  Class="d-flex pa-8 clickable flex-column align-center justify-center mud-width-full rounded dim example-question">
             <MudText Typo="Typo.body1">
                 @WhatIsPerfReview
             </MudText>
@@ -26,7 +26,7 @@
     </MudItem>
     <MudItem lg="3" xs="12">
         <MudPaper Elevation="4" Height="6rem" onclick="@(async () => await OnClickedAsync(WhatDoesPmDo))"
-                  Class="d-flex pa-8 clickable flex-column align-center justify-center mud-width-full rounded dim">
+                  Class="d-flex pa-8 clickable flex-column align-center justify-center mud-width-full rounded dim example-question">
             <MudText Typo="Typo.body1">
                 @WhatDoesPmDo
             </MudText>
