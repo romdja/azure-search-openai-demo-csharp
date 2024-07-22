@@ -52,6 +52,7 @@ public sealed partial class Chat
             var result = await ApiClient.ChatConversationAsync(request);
 
             _questionAndAnswerMap[_currentQuestion] = result.Response;
+            
             if (result.IsSuccessful)
             {
                 _userQuestion = "";

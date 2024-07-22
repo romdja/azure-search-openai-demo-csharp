@@ -11,15 +11,15 @@
         </CardHeaderAvatar>
         <CardHeaderContent>
             <MudText Typo="Typo.h5">
-                <MudLink Href="https://www.nuget.org/packages/Azure.AI.OpenAI" Color="Color.Secondary" 
+                @* <MudLink Href="https://www.nuget.org/packages/Azure.AI.OpenAI" Color="Color.Secondary" 
                          Target="_blank" aria-label="The official Azure.AI.OpenAI .NET NuGet link.">
                     Azure.AI.OpenAI 📦
-                </MudLink>
+                </MudLink> *@
             </MudText>
             <MudText Typo="Typo.h6">Portal AI360</MudText>
         </CardHeaderContent>
     </MudCardHeader>
-    <MudCardContent>
+    @* <MudCardContent>
         <MudCarousel Class="mud-width-full"
                      BulletsColor="Color.Primary" Style="height: 58vh;"
                      AutoCycle="true" TData="Image" Context="image"
@@ -41,8 +41,8 @@
                 </MudLink>
             </MudText>
         </div>
-    </MudCardContent>
-    <MudCardActions>
+    </MudCardContent> *@
+    @* <MudCardActions>
         <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Size="Size.Large" Target="_blank"
                        aria-label="Azure SDK for .NET link."
                        Href="https://github.com/Azure/azure-sdk-for-net"
@@ -62,5 +62,5 @@
         <MudIconButton Icon="@Icons.Material.Filled.Html" Size="Size.Large" Target="_blank"
                        aria-label="Markdig (GitHub repository) link."
                        Href="https://github.com/xoofx/markdig" Title="Markdig GitHub repo link." />
-    </MudCardActions>
+    </MudCardActions> *@
 </MudCard>
