@@ -1,12 +1,13 @@
 ﻿<MudGrid Justify="Justify.Center" Spacing="2">
     <MudItem xs="0" sm="0" md="0" lg="12" Class="d-flex">
-        @* <MudIcon Icon="@Icons.Material.Filled.AutoAwesome"
-                 Class="icon-huge ma-auto" Color="Color.Primary" /> *@
-    <MudImage Src="gclogo.svg" Class="rounded filter-shadow ma-auto" Alt="Logo" Width="150" Height="150" Elevation="0" />
-                
+        <MudIcon Icon="@Icons.Material.Filled.AutoAwesome"
+                 Class="icon-huge ma-auto" />
+    @* <MudImage Src="gclogo.svg" Class="rounded filter-shadow ma-auto" Alt="Logo" Width="150" Height="150" Elevation="0" /> *@
+    @* <MudImage Src="pmz.png" Class="rounded filter-shadow ma-auto" Alt="Logo"  Height="100" Elevation="0" /> *@
+               
     </MudItem>
     <MudItem xs="12">
-        <MudText Typo="Typo.h4" style="font-weight: 700;" Align="Align.Center">@Message</MudText>
+        <MudText Typo="Typo.h4" Align="Align.Center">@Message</MudText>
     </MudItem>
     <MudItem lg="3" xs="12">
         <MudPaper Elevation="4" Height="6rem" onclick="@(async () => await OnClickedAsync(WhatIsIncluded))"

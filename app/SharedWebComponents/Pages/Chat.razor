@@ -9,7 +9,7 @@
         @if (_questionAndAnswerMap is { Count: 0 })
         {
             <div class="d-flex align-content-center flex-wrap flex-grow-1 full-height">
-                <Examples Message="Welcome to Portal AI360" OnExampleClicked="@OnAskQuestionAsync" />
+                <Examples Message="" OnExampleClicked="@OnAskQuestionAsync" />
             </div>
         }
         else
@@ -23,7 +23,7 @@
                                 <MudText Typo="Typo.body1" Align="Align.End">
                                     @question
                                 </MudText>
-                                <MudText Typo="Typo.caption" Align="Align.End" Color="Color.Secondary">
+                                <MudText Typo="Typo.caption" Align="Align.End" Color="Color.Primary">
                                     @($"Asked at {askedOn:h:mm:ss tt} on {askedOn:M/dd/yy}")
                                 </MudText>
                             </MudPaper>

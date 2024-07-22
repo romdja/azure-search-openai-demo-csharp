@@ -6,14 +6,69 @@ namespace SharedWebComponents.Shared;
 
 public sealed partial class MainLayout
 {
-    private readonly MudTheme _theme = new MudTheme { Palette = 
+
+    private static MudTheme GetGreenchoiceTheme()
+    {
+        MudTheme _theme = new MudTheme { Palette = 
     { 
         Primary = Colors.Green.Default, 
-        Secondary = new MudColor("#8CC441"),
-        Tertiary = Colors.Green.Darken2,
 
-        AppbarBackground = new MudColor("#8CC441"),
-        } };
+        Secondary = new MudColor("#8CC441"),
+
+        SecondaryLighten = "#e2f0cf",
+        
+        Tertiary = new MudColor("#ffc84a"),
+    
+
+        AppbarBackground = new MudColor("#8CC441")}
+        };
+
+        return _theme;
+    }
+
+    private static MudTheme GetCleanTheme()
+    {
+        MudTheme _theme = new MudTheme { Palette = 
+    { 
+        Primary = new MudColor("#F2642E"), 
+
+        Secondary = new MudColor("#8CC441"),
+
+       // SecondaryLighten = "#e2f0cf",
+        
+        Tertiary = new MudColor("#FFFFFF"),
+    
+
+        AppbarBackground = new MudColor("#FFFFFF")}
+        };
+
+        return _theme;
+    }
+
+     private static MudTheme GetPinkTheme()
+    {
+        MudTheme _theme = new MudTheme { Palette = 
+    { 
+        Primary = new MudColor("#FF3F81"), 
+
+        Secondary = new MudColor("#8CC441"),
+
+       // SecondaryLighten = "#e2f0cf",
+        
+        Tertiary = new MudColor("#FFFFFF"),
+
+        
+    
+
+        AppbarBackground = new MudColor("#FFFFFF")}
+        };
+
+        return _theme;
+    }
+
+
+    private readonly MudTheme _theme = GetPinkTheme();
+
     private bool _drawerOpen = true;
     private bool _settingsOpen = false;
     private SettingsPanel? _settingsPanel;

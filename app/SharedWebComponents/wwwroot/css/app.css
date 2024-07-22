@@ -103,7 +103,7 @@ ol > li {
 }
 
 .loading-progress circle:last-child {
-    stroke: #8cc441;
+    stroke: black;
     stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8),
         500%;
     transition: stroke-dasharray 0.05s ease-in-out;
@@ -263,12 +263,14 @@ button {
 }
 
 .example-question {
-    background-color: #ffc84a;
-    color: #2d2d2a;
+    background-color: white;
+    color: black;
 }
 
 .example-question:hover {
-    background-color: #e2f0cf;
-    color: #0f5532;
+    background-color: var(--mud-palette-primary);
+
+    color: white;
     filter: brightness(100%);
+    border-color: var(--mud-palette-primary);
 }

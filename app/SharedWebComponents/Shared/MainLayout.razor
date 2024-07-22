@@ -1,6 +1,7 @@
 ﻿@inherits             LayoutComponentBase
 
 <MudThemeProvider @bind-IsDarkMode="@_isDarkTheme" Theme="_theme" />
+
 <MudDialogProvider FullWidth="true" MaxWidth="MaxWidth.Small"
                    CloseButton="true"
                    DisableBackdropClick="true"
@@ -14,7 +15,7 @@
 <MudRTLProvider RightToLeft="_isRightToLeft">
     <MudLayout class="@(_isRightToLeft ? "rtl-lang" : "")">
         <MudAppBar Elevation="20">
-            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" id="nav-toggle"
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Primary" id="nav-toggle"
                         Title="Toggle navigation sidebar"
                         Size="Size.Large" Edge="Edge.Start" OnClick="@OnMenuClicked" />
             @if (SortDisabled is false)
@@ -22,15 +23,15 @@
                 <MudTooltip Text="@(_isReversed ? "Sort conversations with latest answers on bottom" : "Sort conversations with latest answers on top")"
                             Placement="Placement.Right" Arrow="true" Color="Color.Primary">
                     <MudToggleIconButton Toggled="@_isReversed" ToggledChanged=@OnIsReversedChanged Size="Size.Large"
-                                         ToggledSize="Size.Large" Color="Color.Inherit"
-                                         Icon=@Icons.Material.Filled.ArrowCircleDown ToggledColor="Color.Inherit"
+                                         ToggledSize="Size.Large" Color="Color.Primary"
+                                         Icon=@Icons.Material.Filled.ArrowCircleDown ToggledColor="Color.Primary"
                                          ToggledIcon=@Icons.Material.Filled.ArrowCircleUp />
                 </MudTooltip>
             }
             <MudSpacer />
             @if (SettingsDisabled is false)
             {
-                <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Inherit" Size="Size.Large"
+                <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Primary" Size="Size.Large"
                            Title="Open the developer settings side panel"
                            OnClick="@(_ => _settingsOpen = _settingsOpen is false)" />
             }
@@ -47,8 +48,8 @@
             <MudDrawerHeader>
                 @* <MudImage Src="gclogo.svg" Class="rounded filter-shadow" Alt="Logo" Width="50" Height="50" Elevation="0" /> *@
                 @* <MudSpacer /> *@
-                <MudText Typo="Typo.h5" Color=Color.Surface>
-                    Portal  <span style="color: #0f5532;">AI360</span>
+                <MudText Typo="Typo.h6" Color=Color.Surface>
+                    PORTAL  AI360
                 </MudText>
             </MudDrawerHeader>
             <MudDivider Style="flex-grow: 0;" />
