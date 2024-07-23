@@ -26,18 +26,17 @@ public sealed partial class MainLayout
         return _theme;
     }
 
-    private static MudTheme GetCleanTheme()
+ 
+
+ private static MudTheme GetBrandedTheme(string primary)
     {
         MudTheme _theme = new MudTheme { Palette = 
     { 
-        Primary = new MudColor("#F2642E"), 
+        Primary = new MudColor(primary), 
 
-        Secondary = new MudColor("#8CC441"),
+        Secondary = new MudColor(primary),
 
-       // SecondaryLighten = "#e2f0cf",
-        
         Tertiary = new MudColor("#FFFFFF"),
-    
 
         AppbarBackground = new MudColor("#FFFFFF")}
         };
@@ -45,29 +44,13 @@ public sealed partial class MainLayout
         return _theme;
     }
 
-     private static MudTheme GetPinkTheme()
-    {
-        MudTheme _theme = new MudTheme { Palette = 
-    { 
-        Primary = new MudColor("#FF3F81"), 
-
-        Secondary = new MudColor("#8CC441"),
-
-       // SecondaryLighten = "#e2f0cf",
-        
-        Tertiary = new MudColor("#FFFFFF"),
-
-        
     
 
-        AppbarBackground = new MudColor("#FFFFFF")}
-        };
+    // #FF3F81 (Pink)
+    // #F2642E (Orange)
 
-        return _theme;
-    }
-
-
-    private readonly MudTheme _theme = GetPinkTheme();
+    
+    private readonly MudTheme _theme = GetBrandedTheme("#F2642E");
 
     private bool _drawerOpen = true;
     private bool _settingsOpen = false;
@@ -94,14 +77,21 @@ public sealed partial class MainLayout
 
     private bool SettingsDisabled => new Uri(Nav.Uri).Segments.LastOrDefault() switch
     {
-        "ask" or "chat" => false,
-        _ => true
+        // "ask" or "chat"  => false,
+        // _ => true
+
+         "documents"   => true,
+        _ => false
+
     };
 
     private bool SortDisabled => new Uri(Nav.Uri).Segments.LastOrDefault() switch
     {
-        "voicechat" or "chat" => false,
-        _ => true
+        // "voicechat" or "chat" => false,
+        // _ => true
+
+        "documents"   => true,
+                _ => false
     };
 
     private void OnMenuClicked() => _drawerOpen = !_drawerOpen;

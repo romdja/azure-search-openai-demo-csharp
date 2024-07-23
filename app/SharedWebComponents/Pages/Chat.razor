@@ -1,4 +1,4 @@
-﻿@page "/chat"
+﻿@page "/"
 
 <!-- This page is intended for conversational Q&A. -->
 
@@ -78,7 +78,7 @@
             
                 <VoiceTextInput @bind-Value="_userQuestion" Label=""
                                     Icon="@Icons.Material.Filled.QuestionAnswer"
-                                Placeholder="Ask Anything ..."
+                                Placeholder="Enter your prompt."
                                 HelperText="Use Shift + Enter for new lines."
                                 Disabled=@_isReceivingResponse
                                 OnEnterKeyPressed="OnAskClickedAsync" />
